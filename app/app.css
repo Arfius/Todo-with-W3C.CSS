@@ -1,0 +1,13 @@
+.fade.ng-enter {
+  transition:2s linear all;
+  opacity:0;
+}
+
+.fade.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+.line-through
+{
+  text-decoration:line-through;
+}

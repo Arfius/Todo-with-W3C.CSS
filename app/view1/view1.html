@@ -1,0 +1,43 @@
+
+<header class="w3-container w3-teal">
+    <h1>Todo with W3C.CSS</h1>
+</header>
+
+<div class="w3-container">
+    <form>
+    <div class="row">
+
+        <div class="w3-col m10 l11">
+            <input ng-model="newtodo"  class="w3-input" type="text" placeholder="what's new?"/>
+        </div>
+        <div class="w3-col m2 l1">
+            <a ng-click="addtodo(newtodo)" class="w3-btn-floating w3-teal">+</a>
+        </div>
+    </div>
+    </form>
+</div>
+
+<div class="w3-container">
+    <table class="w3-table w3-striped">
+        <tr>
+            <th>Done</th>
+            <th>Task</th>
+            <th>Delete</th>
+        </tr>
+        <tr ng-repeat="todo in todolist" ng-class="{'line-through':todo.checked,'':!todo.checked}" class="fade">
+            <td><input ng-click="updatecheck()" class="w3-check" type="checkbox" checked="{{todo.checked}}" ng-model="todo.checked">
+            <td>
+                <div class="w3-medium">{{todo.task}}</div>
+                <div class="w3-tiny w3-text-teal" am-time-ago="todo.created" ></div>
+        </td>
+            <td> <i class="fa fa-trash w3-large" ng-click="delete(todo)"></i> </td>
+        </tr>
+    </table>
+</div>
+
+
+
+<footer class="w3-container w3-teal">
+    <span>Todo in list {{todolist.length }} </span>    <span>|| done {{todolist | done }} </span> <span> <a ng-click="removealldone()">[remove all done]</a> </span>
+
+</footer>
