@@ -15,8 +15,8 @@ To get you started you can simply clone this repo and install the dependencies:
 ### Usage 
 
 ```
-git clone https://github.com/angular/angular-seed.git
-cd angular-seed
+git clone https://github.com/Arfius/Todo-with-W3C.CSS.git
+cd Todo-with-W3C.CSS
 npm install
 npm start
 ```
